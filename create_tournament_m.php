@@ -73,7 +73,7 @@ if (!empty($_POST)) {
 
 <br />
 <br />
-<a href="logout.php">Want to leave?</a>
+<a href="logout_m.php">Want to leave?</a>
 </div>
 </body>
 </html>

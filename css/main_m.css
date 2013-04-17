@@ -1,7 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 #content {
-	margin-top: -10px;
+	margin-top: -25px;
+	padding-top: 10px;
     text-align:center;
 	background:#5F5F5F;
 	padding-bottom:10px;
@@ -19,6 +20,7 @@ a.visited, a.hover, a {
 body {
 	background:#5F5F5F !important;
 	font-family: 'Noto-sans', sans-serif;
+	text-shadow: none !important;
 	}
 	
 h1 {

@@ -8,7 +8,7 @@
         <title>
         </title>
         <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-        <link rel="stylesheet" href="css/my.css" />
+		<link rel="stylesheet" href="css/main_m.css">
         <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
         </script>
         <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
