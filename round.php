@@ -5,7 +5,7 @@
 <?php
 session_start();
 if(!$_SESSION['myusername']){
-header("location:index.html");
+header("location:index.php");
 }
 ?>
 <?php
@@ -55,7 +55,7 @@ header("location:index.html");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>Round <?php echo $round?></title>
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 </head>
