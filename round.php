@@ -46,17 +46,7 @@ header("location:index.html");
 	}
 	
 
-    if (!empty($_POST)) {
-		//echo ];
-		//Insert winners
-		for ($i = 1; $i <= $number_of_matches; $i++) {
-			insert_winner($_POST['match'.$i.'winner'], $tournament, $round); 
-		}
-		
-		$round = $round +1;
-		header('Location: round.php?round='. $round.'&tournament='.$tournament);
-		die;
-	}
+    
     
 ?>
 	 
@@ -75,6 +65,23 @@ header("location:index.html");
 <h1>Dyno-Tourn</h1>
 </div>
 <div id="content">
+<?php
+if (!empty($_POST)) {
+	for ($i = 1; $i <= $number_of_matches; $i++) {
+		if(!isset($_POST["match".$i."winner"])){ 
+        	echo "No winner selected for match ".$i."!"?><br /><?php
+    	} else {
+			for ($i = 1; $i <= $number_of_matches; $i++) {
+			insert_winner($_POST['match'.$i.'winner'], $tournament, $round); 
+			}
+		
+		$round = $round +1;
+		header('Location: round.php?round='. $round.'&tournament='.$tournament);
+		die;
+		}
+	}
+}
+?>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <?php
 	$name_count =0;

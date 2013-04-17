@@ -12,6 +12,9 @@
 	
 }
 
+#errors {
+	color:#F00;
+	}
 a.visited, a.hover, a {
 	color: #fff;
 	}
