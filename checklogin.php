@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'database.php';
 
 $tbl_name="users"; // Table name 
@@ -22,9 +22,9 @@ $count=mysql_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
 
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-session_register("myusername");
-session_register("mypassword"); 
+// Register $myusername, $mypassword and redirect to file "create_tournament.php"
+$_SESSION ['myusername'] = $myusername;
+$_SESSION ['mypassword'] = $mypassword;
 header("location:create_tournament.php");
 }
 else {

@@ -13,6 +13,7 @@ header("location:create_tournament.php");
 <title>Welcome to Dyno-tourn</title>
 <link rel="stylesheet" href="css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<script src="js/detectmobilebrowser.js" type="text/javascript"></script>
 </head>
 
 <body>

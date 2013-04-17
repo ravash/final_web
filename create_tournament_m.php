@@ -12,9 +12,22 @@ if(!$_SESSION['myusername']){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Create Your Tournament</title>
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main_m.css">
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-<script src="js/detectmobilebrowsert.js" type="text/javascript"></script>
+<meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/my.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script src="js/my.js">
+        </script>
 </head>
 
 <body>
@@ -41,18 +54,23 @@ if (!empty($_POST)) {
  
 }
 ?></div>
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" data-ajax="false">
 	<?php for ($i =1; $i <9; $i++) { ?>
-		<p><input type="text" name="name<?php echo $i;?>" />
+		<p><div data-role="fieldcontain">
+                <input name="name<?php echo $i;?>" type="text" />
+           </div>
         VS
         <?php $i++;?>
-        <input type="text" name="name<?php echo $i;?>" />
-        <br /><br />
+        	<div data-role="fieldcontain">
+                <input name="name<?php echo $i;?>" type="text" />
+           </div>
+        <br />
+        <hr />
         </p>
-        <hr width=60% />
     <?php } ?>
 	<input type="submit" value="Submit"/>
 </form>
+
 <br />
 <br />
 <a href="logout.php">Want to leave?</a>
