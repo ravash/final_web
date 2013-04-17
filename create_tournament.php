@@ -1,7 +1,12 @@
 <?php
 include "functions.php";
 ?>
-
+<?php
+session_start();
+if(!$_SESSION['myusername']){
+header("location:index.html");
+}
+?>
 <?php
 if (!empty($_POST)) {
 	$tournament_id = add_tournament("cool");
@@ -18,9 +23,13 @@ if (!empty($_POST)) {
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+<div id="header">
+<h1>Dyno-Tourn</h1>
+</div>
 <div id="content">
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 	<?php for ($i =1; $i <9; $i++) { ?>
@@ -34,6 +43,9 @@ if (!empty($_POST)) {
     <?php } ?>
 	<input type="submit" value="Submit"/>
 </form>
+<br />
+<br />
+<a href="logout.php">Want to leave?</a>
 </div>
 </body>
 </html>
