@@ -1,0 +1,47 @@
+--
+-- MySQL 5.1.66
+-- Thu, 18 Apr 2013 21:19:57 +0000
+Here is the database structure from our webdesign4 incase you need it!!!!!
+
+
+CREATE DATABASE `db200167576` DEFAULT CHARSET latin1;
+
+USE `db200167576`;
+
+CREATE TABLE `names` (
+   `id` int(11) not null auto_increment,
+   `tournament_id` int(11) not null,
+   `name` varchar(255) not null,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+-- [Table `names` is empty]
+
+CREATE TABLE `rounds` (
+   `id` int(11) not null auto_increment,
+   `tournament_id` int(11) not null,
+   `number` int(11) not null,
+   `name_id` int(11) not null,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+-- [Table `rounds` is empty]
+
+CREATE TABLE `tournaments` (
+   `id` int(11) not null auto_increment,
+   `name` varchar(255) not null,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+-- [Table `tournaments` is empty]
+
+CREATE TABLE `users` (
+   `id` int(11) not null auto_increment,
+   `password` varchar(255) not null,
+   `username` varchar(255) not null,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;
+
+INSERT INTO `users` (`id`, `password`, `username`) VALUES 
+('1', 'password', 'admin'),
+('2', 'tomspassword', 'trial');
