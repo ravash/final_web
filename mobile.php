@@ -51,7 +51,7 @@
                 <label for="mypassword">
                     Password
                 </label>
-                <input name="mypassword" id="mypassword" placeholder="" value="" type="text">
+                <input name="mypassword" id="mypassword" placeholder="" value="" type="password">
             </div>
             <input type="submit" value="Submit">
         </form>

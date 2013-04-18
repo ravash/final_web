@@ -48,10 +48,17 @@ h1 {
 	}
 	
 #left_player {
-	padding-left: 150px;
 	float:left;
+	width: 40%;
 	}
+	
+	
 #right_player {
-	padding-right:150px;
 	float:right;
+	padding-right: 20px;
+	width: 40%;
 	}	
+
+#left-label {
+	float: right;
+	}

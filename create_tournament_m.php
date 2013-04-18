@@ -47,7 +47,7 @@ if (!empty($_POST)) {
 	for ($i =1; $i <9; $i++) {  
 		 insert_name($_POST['name'.$i], $tournament_id);
     }
-	header('Location: round.php?round=1&tournament='.$tournament_id);
+	header('Location: round_m.php?round=1&tournament='.$tournament_id);
     }
 		
 }
