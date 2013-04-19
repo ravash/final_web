@@ -3,7 +3,9 @@ include "functions.php";
 session_start();
 if(!$_SESSION['myusername']){
 	header("location:index.php");
+	
 }
+	
 ?>
 
 
@@ -22,6 +24,15 @@ if(!$_SESSION['myusername']){
 <h1>Dyno-Tourn</h1>
 </div>
 <div id="content">
+<div id="dylanstest">
+<?php
+$username = $_SESSION ['myusername'];
+	$password = $_SESSION ['mypassword'];
+	echo $username;
+	echo "<br />";
+	echo $password;
+	?>
+   </div>
 <div id="errors">
 <?php
 
@@ -55,7 +66,13 @@ if (!empty($_POST)) {
 </form>
 <br />
 <br />
-<a href="logout.php">Want to leave?</a>
+<table id="footer">
+<ul>
+<li id="footerl">
+<a href="logout.php">Want to leave?</a></li>
+<li id="footerr"><a href="manage_user.php">Manage your Account</a></il>
+</ul>
+</table>
 </div>
 </body>
 </html>

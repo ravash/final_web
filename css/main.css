@@ -47,6 +47,20 @@ h1 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); 	     /* IE6-9 */
 	}
 	
+#footerl, #footerr, #footer {
+	list-style: none;
+	padding-bottom: 15px;
+	}
+	
+#footerl {
+	float: left;
+	padding-left: 20%;
+	}
+	
+#footerr {
+	float: right;
+	padding-right: 22%;
+	}
 #left_player {
 	padding-left: 150px;
 	float:left;
