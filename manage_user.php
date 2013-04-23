@@ -1,4 +1,9 @@
-
+<!--
+Page: manage_user.php
+Description: this page allows users to change their password and account name
+Dylan Scott & James McColl
+Project 2
+-->
 <?php
 session_start();
 if(!$_SESSION['myusername']){

@@ -1,3 +1,9 @@
+<!--
+Page: checklogin.php
+Description: This page checks the user's input on the index.php page and logs them in if their username and password match
+Dylan Scott & James McColl
+Project 2
+-->
 <?php
 session_start();
 include 'database.php';

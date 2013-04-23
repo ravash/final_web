@@ -1,3 +1,11 @@
+<!--
+Page: database.php
+Description: this page connects to the database
+Dylan Scott & James McColl
+Project 2
+-->
+
+
 <?php
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 

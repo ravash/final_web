@@ -1,3 +1,9 @@
+<!--
+Page: mobile.php
+Description: Basic login page for the mobile user
+Dylan Scott & James McColl
+Project 2
+-->
 <!DOCTYPE html>
 <html>
     <head>

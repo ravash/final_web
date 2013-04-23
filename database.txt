@@ -4,7 +4,7 @@
 Here is the database structure from our webdesign4 incase you need it!!!!!
 
 
-CREATE DATABASE `tournament` DEFAULT CHARSET latin1;
+CREATE DATABASE `tournament` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE `tournament`;
 

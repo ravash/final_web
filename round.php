@@ -9,9 +9,7 @@ header("location:index.php");
 }
 ?>
 <?php
-	//if POST 
-		//increment round count 
-		//save each name to the database 
+	//pull round and tourny numbers from url, redirect if they have a bad link
 	if (!empty($_GET['round'])) {
 		$round = $_GET['round'];
 	}
@@ -49,7 +47,12 @@ header("location:index.php");
     
     
 ?>
-	 
+	<!--
+Page: round.php
+Description: This is our page that generates the radio buttons for the user to decide the winner of each player in each bracket.
+Dylan Scott & James McColl
+Project 2
+--> 
 	
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -66,6 +69,7 @@ header("location:index.php");
 </div>
 <div id="content">
 <?php
+//this loop checks to see if the user has properly selected their choices
 if (!empty($_POST)) {
 	for ($i = 1; $i <= $number_of_matches; $i++) {
 		if(!isset($_POST["match".$i."winner"])){ 
@@ -81,9 +85,11 @@ if (!empty($_POST)) {
 		}
 	}
 }
+
 ?>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
     <?php
+	// This loop dynamically creates a form for the user to select their choices
 	$name_count =0;
 	for ($i = 1; $i <= $number_of_matches; $i++) {?>
     	<div id=match_container">
@@ -100,7 +106,7 @@ if (!empty($_POST)) {
         </div>
     <?php
 	}
-	
+	// this loop checks if there are no more matches left and displays the winner while taking away the submit button.
 	if ($number_of_matches < 1) {
 		echo $names[0]['name']. " is the winner!";
 	}
